@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: movie
+
+mongo:
+  uri: $MONGO_URI
+  database: $MONGO_DATABASE
