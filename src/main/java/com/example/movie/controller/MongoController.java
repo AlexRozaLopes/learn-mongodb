@@ -4,6 +4,7 @@ import com.example.movie.dto.CommentWithMovie;
 import com.example.movie.dto.TitleOnly;
 import com.example.movie.dto.UserWithComments;
 import com.example.movie.model.Comments;
+import com.example.movie.model.MovieCloud;
 import com.example.movie.model.User;
 import com.example.movie.repository.CommentsRepository;
 import com.example.movie.repository.MovieCloudRepository;
@@ -11,6 +12,7 @@ import com.example.movie.repository.UserRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.Comparator;
@@ -24,6 +26,10 @@ public class MongoController {
     private final UserRepository userRepository;
     private final MovieCloudRepository movieCloudRepository;
 
+    @GetMapping("/movie/{title}")
+    public ResponseEntity<MovieCloud> getMovieByName(@PathVariable String title) {
+        return ResponseEntity.ok(movieCloudRepository.findByTitle(title));
+    }
 
     @GetMapping("/comments")
     public ResponseEntity<List<Comments>> getComments() {

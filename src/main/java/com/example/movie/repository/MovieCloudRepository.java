@@ -15,4 +15,5 @@ public interface MovieCloudRepository extends MongoRepository<MovieCloud, Object
     @Query(value = "{}", fields = "{title:1,_id:0}")
     List<TitleOnly> findTitle();
 
+    MovieCloud findByTitle(String title);
 }
