@@ -1,0 +1,160 @@
+{
+  "info": {
+    "name": "MONGO",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Comments with movie",
+      "event": [],
+      "request": {
+        "method": "GET",
+        "header": [],
+        "auth": {
+          "type": "noauth"
+        },
+        "description": "",
+        "url": {
+          "raw": "{{localhost}}:8080/comments-with-movie",
+          "protocol": "",
+          "host": [
+            "{{localhost}}:8080"
+          ],
+          "path": [
+            "comments-with-movie"
+          ],
+          "query": [],
+          "variable": []
+        }
+      }
+    },
+    {
+      "name": "Comments",
+      "event": [],
+      "request": {
+        "method": "GET",
+        "header": [],
+        "auth": {
+          "type": "noauth"
+        },
+        "description": "",
+        "url": {
+          "raw": "{{localhost}}:8080/comments",
+          "protocol": "",
+          "host": [
+            "{{localhost}}:8080"
+          ],
+          "path": [
+            "comments"
+          ],
+          "query": [],
+          "variable": []
+        }
+      }
+    },
+    {
+      "name": "Title",
+      "event": [],
+      "request": {
+        "method": "GET",
+        "header": [],
+        "auth": {
+          "type": "noauth"
+        },
+        "description": "",
+        "url": {
+          "raw": "{{localhost}}:8080/title",
+          "protocol": "",
+          "host": [
+            "{{localhost}}:8080"
+          ],
+          "path": [
+            "title"
+          ],
+          "query": [],
+          "variable": []
+        }
+      }
+    },
+    {
+      "name": "Users with comments",
+      "event": [],
+      "request": {
+        "method": "GET",
+        "header": [],
+        "auth": {
+          "type": "noauth"
+        },
+        "description": "",
+        "url": {
+          "raw": "{{localhost}}:8080/users-with-comments",
+          "protocol": "",
+          "host": [
+            "{{localhost}}:8080"
+          ],
+          "path": [
+            "users-with-comments"
+          ],
+          "query": [],
+          "variable": []
+        }
+      }
+    },
+    {
+      "name": "Users",
+      "event": [],
+      "request": {
+        "method": "GET",
+        "header": [],
+        "auth": {
+          "type": "noauth"
+        },
+        "description": "",
+        "url": {
+          "raw": "{{localhost}}:8080/users",
+          "protocol": "",
+          "host": [
+            "{{localhost}}:8080"
+          ],
+          "path": [
+            "users"
+          ],
+          "query": [],
+          "variable": []
+        }
+      }
+    },
+    {
+      "name": "Find Movie",
+      "event": [],
+      "request": {
+        "method": "GET",
+        "header": [],
+        "auth": {
+          "type": "noauth"
+        },
+        "description": "",
+        "url": {
+          "raw": "{{localhost}}:8080/movie/Civilization",
+          "protocol": "",
+          "host": [
+            "{{localhost}}:8080"
+          ],
+          "path": [
+            "movie",
+            "Civilization"
+          ],
+          "query": [],
+          "variable": []
+        }
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "localhost",
+      "value": "",
+      "type": "default"
+    }
+  ]
+}
