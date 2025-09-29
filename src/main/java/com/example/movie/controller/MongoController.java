@@ -32,6 +32,11 @@ public class MongoController {
         return ResponseEntity.ok(movieCloudRepository.encontrePeloTitulo(title));
     }
 
+    @GetMapping("/movie/{genre}/{year}")
+    public ResponseEntity<List<MovieCloud>> getMovieByNameAndYear(@PathVariable String genre, @PathVariable int year) {
+        return ResponseEntity.ok(movieCloudRepository.findByGenresAndYear(genre, year));
+    }
+
     @GetMapping("/comments")
     public ResponseEntity<List<Comments>> getComments() {
         return ResponseEntity.ok(commentsRepository
