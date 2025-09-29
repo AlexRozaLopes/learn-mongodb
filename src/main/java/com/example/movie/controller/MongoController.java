@@ -28,7 +28,8 @@ public class MongoController {
 
     @GetMapping("/movie/{title}")
     public ResponseEntity<MovieCloud> getMovieByName(@PathVariable String title) {
-        return ResponseEntity.ok(movieCloudRepository.findByTitle(title));
+//        return ResponseEntity.ok(movieCloudRepository.findByTitle(title));
+        return ResponseEntity.ok(movieCloudRepository.encontrePeloTitulo(title));
     }
 
     @GetMapping("/comments")
