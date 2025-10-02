@@ -22,4 +22,6 @@ public interface MovieCloudRepository extends MongoRepository<MovieCloud, Object
 
     List<MovieCloud> findByGenresAndYear(String genre, int year);
 
+    Integer countByGenres(String genre);
+
 }
