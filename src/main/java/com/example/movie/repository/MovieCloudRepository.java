@@ -1,8 +1,10 @@
 package com.example.movie.repository;
 
 import com.example.movie.dto.TitleOnly;
+import com.example.movie.dto.projection.GenreCount;
 import com.example.movie.model.MovieCloud;
 import org.bson.types.ObjectId;
+import org.springframework.data.mongodb.repository.Aggregation;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.data.mongodb.repository.Query;
 import org.springframework.stereotype.Repository;
@@ -23,5 +25,10 @@ public interface MovieCloudRepository extends MongoRepository<MovieCloud, Object
     List<MovieCloud> findByGenresAndYear(String genre, int year);
 
     Integer countByGenres(String genre);
+
+    @Aggregation(pipeline = {"{$unwind: $genres}",
+            "{$group: {_id: $genres, total_filmes: {$sum: 1}}}",
+            "{$sort: {total_filmes: -1}}"})
+    List<GenreCount> countGenre();
 
 }

@@ -3,6 +3,7 @@ package com.example.movie.controller;
 import com.example.movie.dto.CommentWithMovie;
 import com.example.movie.dto.TitleOnly;
 import com.example.movie.dto.UserWithComments;
+import com.example.movie.dto.projection.GenreCount;
 import com.example.movie.model.Comments;
 import com.example.movie.model.MovieCloud;
 import com.example.movie.model.User;
@@ -69,5 +70,10 @@ public class MongoController {
     @GetMapping("/title")
     public ResponseEntity<List<TitleOnly>> getTitle() {
         return ResponseEntity.ok(movieCloudRepository.findTitle());
+    }
+
+    @GetMapping("/movie-for-genre")
+    public ResponseEntity<List<GenreCount>> getMovieByGenre(){
+        return  ResponseEntity.ok(movieCloudRepository.countGenre());
     }
 }
