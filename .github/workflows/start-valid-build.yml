@@ -7,5 +7,5 @@ jobs:
   start-valid:
     runs-on: ubuntu-latest
     steps:
-      - uses: .github/workflows/start-valid-build.yml
+      - uses: .github/workflows/workflow-call-build.yml
 
