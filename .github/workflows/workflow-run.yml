@@ -1,0 +1,15 @@
+name: Notification
+
+on:
+  workflow_run:
+    workflows:
+      - build java
+    types:
+      - completed
+
+jobs:
+  notification:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "notification"
+        run: echo "build feito com sucesso"

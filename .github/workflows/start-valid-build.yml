@@ -1,0 +1,11 @@
+name: start valid build
+
+on:
+  workflow_dispatch:
+
+jobs:
+  start-valid:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: .github/workflows/start-valid-build.yml
+
