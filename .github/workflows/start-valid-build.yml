@@ -5,5 +5,5 @@ on:
 
 jobs:
   start-valid:
-    uses: .github/workflows/workflow-call-build.yml
+    uses: ./.github/workflows/workflow-call-build.yml
 
